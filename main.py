@@ -8,20 +8,20 @@ from loguru import logger
 from langchain.chains import ConversationalRetrievalChain
 from langchain_openai import ChatOpenAI
 
-from langchain.document_loaders import PyPDFLoader
-from langchain.document_loaders import Docx2txtLoader
-from langchain.document_loaders import UnstructuredPowerPointLoader
+from langchain.document_loaders.pdf import PyPDFLoader
+from langchain.document_loaders.word_document import Docx2txtLoader
+from langchain.document_loaders.powerpoint import UnstructuredPowerPointLoader
 
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 # 메모리를 가지고 있는 것이 특징
 from langchain.memory import ConversationBufferMemory
 # FAISS를 통해 버퍼 저장
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 
 # from streamlit_chat import message
-from langchain.callbacks import get_openai_callback
+from langchain_community.callbacks import get_openai_callback
 from langchain.memory import StreamlitChatMessageHistory
 
 def main():
