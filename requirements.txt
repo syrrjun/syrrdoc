@@ -1,0 +1,10 @@
+langchain_openai
+chromadb
+unstructured
+sentence-transformers
+faiss-cpu
+tiktoken
+openai
+pypdf
+loguru
+docx2txt
